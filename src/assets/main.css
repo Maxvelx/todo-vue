@@ -1,0 +1,173 @@
+@import './base.css';
+
+.container {
+    position: absolute;
+    display: flex;
+}
+
+.todo-board {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 250px;
+    gap: 5px;
+}
+
+.list-card-title {
+    font: 600 1rem sans-serif;
+    text-align: center;
+}
+
+.task-card {
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #ababab;
+}
+
+.task-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px 17px 17px;
+    gap: 8px;
+}
+
+.task-title {
+   white-space: normal;
+   word-wrap: break-word;
+}
+
+.task-priority {
+   font-style: italic;
+}
+
+.task-card:hover #task-card-delete {
+    cursor: pointer;
+    visibility: visible;
+}
+
+.list-card:hover #list-card-delete {
+    cursor: pointer;
+    visibility: visible;
+}
+
+.sidebar-tab:hover #board-card-delete {
+    cursor: pointer;
+    visibility: visible;
+}
+
+.card-add {
+    opacity: 0;
+    transform: translateY(-10px);
+    display: grid;
+    place-items: center;
+    border: 1px dashed #ababab;
+    border-radius: 4px;
+    padding: 15px 0;
+    transition: 0.2s;
+}
+
+.card-add:hover {
+    cursor: pointer;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.textarea-add {
+    margin: 17px 0 0 0;
+    min-height: 30px;
+    height: auto;
+    border: unset;
+    border-bottom: 1px solid #ababab;
+}
+
+.textarea-add:focus {
+    outline: none;
+    border-bottom: 1px solid #ababab;
+}
+
+.list-card-header {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-card-delete {
+    vertical-align: center;
+    border: unset;
+    background-color: unset;
+    font-weight: 600;
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: #ababab;
+    visibility: hidden;
+}
+
+.btn-card-delete:hover {
+    color: #da5d5d;
+}
+
+.btn-right {
+margin: auto 91%;
+}
+
+.sidebar {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100dvh;
+    border-right: 1px solid #ababab;
+}
+
+.sidebar-container {
+    padding: 20px 0;
+}
+
+.sidebar-tab {
+    padding: 15px 10px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-tab:hover {
+    cursor: pointer;
+    background: #e3e1e1;
+}
+
+.sidebar-tab.active {
+    background: #cdced0;
+}
+
+.sidebar-header{
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar-textarea-add {
+    margin: 15px 10px 15px 20px;
+}
+
+.new-board {
+    font-size: 12px;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
